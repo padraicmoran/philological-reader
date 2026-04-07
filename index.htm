@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Philological Reader</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="Pádraic Moran">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column bg-light">
+
+    <!-- Page header -->
+    <div class="p-3 border-bottom shadow-sm">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <h2 class="h4 fw-bold m-0">Philological Reader</h2>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="app-container">
+        <div id="main-content" class="p-4">
+
+            <!-- Text input-->
+            <div id="input-section" class="mb-4">
+                <label for="raw-input" class="form-label">Paste your text below and click "Start". 
+                    Your text will then be displayed with links to dictionaries. </label>
+                <textarea id="raw-input" class="form-control mb-3" rows="15"></textarea>
+                <button id="btn-go" class="btn btn-secondary px-4">Start</button>
+
+                <div class="mt-5 text-secondary small">
+                    A project by <a href="https://pmoran.ie/" target="_blank">Pádraic Moran</a>. 
+                    Coded using <a href="https://gemini.google.com/" target="_blank">Gemini</a>.
+                    Source code available on <a href="https://github.com/" target="_blank">GitHub</a>. 
+                    <br>Feel free to re-use and adapt or to suggest additional dictionaries for inclusion here.
+                </div>
+            </div>
+
+            <!-- Text display -->
+            <div id="reader-section" class="d-none">
+                <!-- Dictionary controls -->
+                <div class="card controls-card mb-3 shadow-sm">
+                    <div class="card-body d-flex align-items-center justify-content-start py-2">
+                        <span class="small fw-bold me-3">Select dictionary:</span>
+                        <div id="dictionary-toggle-container" class="btn-group btn-group-sm" role="group"></div>
+                    </div>
+                </div>
+                <!-- Text interface -->
+                <div id="text-container" class="bg-white p-4 mb-3 rounded shadow-sm border"></div>
+                <button id="btn-change-text" class="btn btn-outline-secondary d-none px-4">Change text</button>
+            </div>
+        </div>
+
+        <div id="resizer"></div>
+
+        <div id="sidebar">
+            <iframe name="lookup-frame" id="lookup-frame" src="about:blank"></iframe>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="reader.js"></script>
+</body>
+</html>
