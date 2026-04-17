@@ -12,14 +12,14 @@ const dictionaries = [
         url: (word) => `https://dil.ie/search?q=${word}`
     },
     {
-        id: "perseus",
-        label: "Perseus",
-        url: (word) => `https://www.perseus.tufts.edu/hopper/morph?l=${word.toLowerCase()}&la=la`
-    },
-    {
         id: "logeion",
         label: "Logeion",
         url: (word) => `https://logeion.uchicago.edu/${word.toLowerCase()}`
+    },
+    {
+        id: "perseus",
+        label: "Perseus",
+        url: (word) => `https://www.perseus.tufts.edu/hopper/morph?l=${word.toLowerCase()}&la=la`
     }
 ];
 
